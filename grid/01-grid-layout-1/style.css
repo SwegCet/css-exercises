@@ -6,7 +6,7 @@ html {
 
 .container {
   display: grid;
-  grid-template: 150px 150px 750px 150px / 300px 900px;
+  grid-template: 100px 100px 500px 100px / 300px 900px;
   column-gap: 15px;
   row-gap: 15px;
   text-align: center;
