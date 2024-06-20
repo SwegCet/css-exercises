@@ -89,3 +89,73 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+
+/*Answer Input */
+
+.container {
+  display: grid; /*Container element has 2 columns */
+  grid-template-columns: 1fr, 4fr; /*Container has 2 columns, 2nd one 4x bigger than 1st */
+  gap: 4px; /*Gap is 4px explicitly stated*/
+}
+
+.header {
+  display: grid; /* Header element has 2 columns */
+  grid-template-columns: repeat(2, 1fr); /* Header element has 2 columns */
+  grid-column: 1 / 3; /* Header spans across all columns */
+}
+
+.logo {
+  justify-self: start; /* just makes logo positioned far left */
+}
+
+.header ul {
+  list-style-type: none; /*Removes the bullet points */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /*Places the ul into their separate grid columns */
+}
+
+.menu ul {
+  display: grid; /*the ul element in menu is a grid */
+}
+
+.sidebar {
+  display: grid; /* just so I can use gap */
+  gap: 50px; /* explicitly stated 50px gap */
+  grid-column: 1 / 2; /* Sidebar only spans across the first column */
+  grid-row: 2 / 4; /* Sidebar spans across the 2nd to the bottom of the page */
+}
+
+.sidebar .side-content {
+  justify-content: center;
+}
+
+.nav ul {
+  display: grid; /*the ul element in nav is a grid */
+  list-style-type: none; /*Removes the bullet points */
+  grid-template-columns: repeat(3, 1fr); /* Places ul element into their separate grid columns */
+}
+
+.nav {
+  grid-column: 2 / 3; /* Nav element spans only across 2nd column */
+}
+
+.article {
+  display: grid; /*Grid Display for columns & rows */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*Uses repeat, auto-fit, and minmax. Column min of 250px and max 1fr */
+  gap: 15px; /*Gap is 15px */
+  grid-column: 2 / 3; /* Article only spans across 2nd column */
+}
+
+.article p {
+  padding: 10px;
+}
+
+.article .card {
+  height: 200px;
+}
+
+.footer {
+  display: grid; /* Just so it can span */
+  grid-column: 1 / 3; /* Footer spans across all columns */
+}
